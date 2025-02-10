@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Firestore Task Schema",
+  "type": "object",
+  "patternProperties": {
+    "^[a-zA-Z0-9_-]+$": {
+      "type": "object",
+      "properties": {
+        "completed": { "type": "boolean" },
+        "created": { "type": "string", "format": "date-time" },
+        "details": { "type": "string" },
+        "title": { "type": "string" },
+        "user": { "type": "string", "pattern": "^/users/[a-zA-Z0-9_-]+$" }
+      },
+      "required": ["completed", "created", "title", "user"],
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false,
+  "example": {
+    "Task123": {
+      "completed": false,
+      "created": "2025-02-10T10:05:53-04:00",
+      "details": "Study for reflection for CSC 305 week 3 on firebase",
+      "title": "CSC Reflection Week 3",
+      "user": "/users/TChkjAsNOwTrUjcHjzRKYSPcZxs2"
+    }
+  }
+}
