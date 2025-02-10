@@ -85,12 +85,16 @@ class _LoginWidgetState extends State<LoginWidget>
                     Row(
                       mainAxisSize: MainAxisSize.max,
                       children: [
-                        ClipRRect(
-                          borderRadius: BorderRadius.circular(8.0),
-                          child: Image.asset(
-                            'assets/images/Group_7.png',
-                            width: 120.0,
-                            fit: BoxFit.contain,
+                        Padding(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
+                              0.0, 0.0, 0.0, 117.0),
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(8.0),
+                            child: Image.asset(
+                              'assets/images/Group_7.png',
+                              width: 120.0,
+                              fit: BoxFit.contain,
+                            ),
                           ),
                         ),
                         Padding(
